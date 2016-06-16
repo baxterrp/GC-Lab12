@@ -35,6 +35,16 @@ public class Cpu1 extends Player {
 		System.out.println(getName() + " chose " + getValue());
 		System.out.println("You chose " + choice);
 
+		int[] status = RPS.compareRPS(choice, getValue());
+
+		if (status[0] == 1) {
+			System.out.println("You won!");
+		} else if (status[1] == 1) {
+			System.out.println(getName() + " wins!");
+		} else {
+			System.out.println("Tied!");
+		}
+
 		return getValue();
 
 	}

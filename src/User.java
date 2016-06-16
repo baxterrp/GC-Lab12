@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 public class User extends Player {
+	Scanner scan = new Scanner(System.in);
 
 	// user constructor
 	public User(String name) {
@@ -19,6 +22,8 @@ public class User extends Player {
 	}
 
 	public void generateRoshambo() {
-		;
+		System.out.print("Rock, paper, or scissors?");
+		setValue(Validator.getAttackChoice(scan, scan.nextLine().toLowerCase()));
+
 	}
 }

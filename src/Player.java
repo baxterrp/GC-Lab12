@@ -46,5 +46,7 @@ public abstract class Player {
 		return value;
 
 	}
-	
+
+	public abstract void generateRoshambo();
+
 }
