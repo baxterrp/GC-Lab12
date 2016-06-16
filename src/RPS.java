@@ -1,42 +1,51 @@
 public enum RPS {
 	ROCK, PAPER, SCISSORS;
 
-	public static String compareRPS(RPS player1, RPS player2) {
+	public static int[] compareRPS(RPS player1, RPS player2) {
 
-		String output = "";
+		int[] win = { 1, 0, 0 };
+		int[] loss = { 0, 1, 0 };
+		int[] tie = { 0, 0, 1 };
+		int[] output;
 
 		switch (player1) {
 		case ROCK:
 			if (player2 == PAPER) {
-				output = "lose";
+				output = loss;
 			} else if (player2 == SCISSORS) {
-				output = "win";
+				output = win;
 			} else {
-				output = "tie";
+				output = tie;
 			}
 			break;
 		case PAPER:
 			if (player2 == ROCK) {
-				output = "win";
+				output = win;
 			} else if (player2 == SCISSORS) {
-				output = "lose";
+				output = loss;
 			} else {
-				output = "tie";
+				output = tie;
 			}
 			break;
 		case SCISSORS:
 			if (player2 == ROCK) {
-				output = "lose";
+				output = loss;
 			} else if (player2 == PAPER) {
-				output = "win";
+				output = win;
 			} else {
-				output = "tie";
+				output = tie;
 			}
 			break;
+		default:
+			output = tie;
 
 		}
 
 		return output;
 
+	}
+
+	public static String toString(String name, String getStats) {
+		return name + ", " + getStats;
 	}
 }

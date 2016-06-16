@@ -1,14 +1,24 @@
-public class User extends Player{
-	
+public class User extends Player {
+
+	// user constructor
+	public User(String name) {
+		super(name);
+	}
+
+	// setValue for User takes string input
 	public void setValue(String value) {
 
 		if (value.equals("rock")) {
-			super.value = RPS.ROCK;
+			super.setValue(RPS.ROCK);
 		} else if (value.equals("paper")) {
-			super.value = RPS.PAPER;
+			super.setValue(RPS.PAPER);
 		} else if (value.equals("scissors")) {
-			super.value = RPS.SCISSORS;
+			super.setValue(RPS.SCISSORS);
 		}
 
+	}
+
+	public void generateRoshambo() {
+		;
 	}
 }

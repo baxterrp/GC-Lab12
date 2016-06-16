@@ -1,23 +1,25 @@
-public class Player {
+public abstract class Player {
 
 	private String name;
+	private int wins;
+	private int losses;
+	private int ties;
+	private RPS value;
 
-	protected RPS value;
-
-	public String getName() {
-
-		return name;
-
+	// constructor for player
+	public Player(String name) {
+		this.name = name;
 	}
 
-	public void setValue(RPS value) {
-		this.value = value;
+	public void setStats(int[] score) {
+		wins += score[0];
+		losses += score[1];
+		ties += score[2];
 	}
 
-	public RPS getValue() {
-
-		return value;
-
+	public String getStats() {
+		return "you have " + wins + " win(s), " + losses + " loss(es), " + ties
+				+ " tie(s).";
 	}
 
 	public void setName(String name) {
@@ -26,29 +28,23 @@ public class Player {
 
 	}
 
-	public RPS generateRoshambo() {
+	// getName
+	public String getName() {
 
-		int choice = (int) (Math.random() * 3) + 1;
-
-		switch (choice) {
-
-		case 1:
-
-			return RPS.ROCK;
-
-		case 2:
-
-			return RPS.PAPER;
-
-		case 3:
-
-			return RPS.SCISSORS;
-
-		default:
-
-			return RPS.PAPER;
-
-		}
+		return name;
 
 	}
+
+	// setValue
+	public void setValue(RPS value) {
+		this.value = value;
+	}
+
+	// getValue
+	public RPS getValue() {
+
+		return value;
+
+	}
+	
 }
