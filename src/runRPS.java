@@ -10,27 +10,30 @@ public class runRPS {
 		System.out.println("What's your name?");
 		User player1 = new User(scan1.nextLine());
 
-		System.out.println("Who do you want to play against? Red or Blue?");
+		System.out
+				.println("Who do you want to play against? Red, Blue, or Green?");
 		player = Validator.getCpuName(scan1, scan1.nextLine());
 
 		Cpu1 red = new Cpu1("Red");
 		Cpu2 blue = new Cpu2("Blue");
+		Cpu3 green = new Cpu3("Green");
 
 		do {
 
 			player1.generateRoshambo();
 
 			if (player.equals("Red")) {
-				
-				
 
 				player1.setStats(RPS.compareRPS(player1.getValue(),
 						red.play(player1.getValue())));
-			} else {
+			} else if (player.equals("Blue")) {
 				player1.setStats(RPS.compareRPS(player1.getValue(),
 						blue.play(player1.getValue())));
+			} else {
+				player1.setStats(RPS.compareRPS(player1.getValue(),
+						green.play(player1.getValue())));
 			}
-			
+
 			System.out.println("Continue?");
 			option = Validator.getContinue(scan1, scan1.nextLine());
 

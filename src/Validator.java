@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 public class Validator {
 	public static String getCpuName(Scanner scan, String ans) {
-		while (!ans.equalsIgnoreCase("Red") && !ans.equalsIgnoreCase("Blue")) {
+		while (!ans.equalsIgnoreCase("Red") && !ans.equalsIgnoreCase("Blue")
+				&& !ans.equalsIgnoreCase("Green")) {
 			System.out
-					.println("Invalid input. You must choose \"Red\" or \"Blue\"");
+					.println("Invalid input. You must choose \"Red\" or \"Blue\" or \"Green\"");
 			ans = scan.nextLine();
 		}
 		return ans;
