@@ -4,6 +4,7 @@ public class Cpu3 extends Cpu1 {
 		super(name);
 	}
 
+	// choses scissors every time
 	public void generateRoshambo() {
 
 		super.setValue(RPS.SCISSORS);

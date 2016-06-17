@@ -21,6 +21,7 @@ public class User extends Player {
 
 	}
 
+	// gets input from user, runs setValue with choice
 	public void generateRoshambo() {
 		System.out.print("Rock, paper, or scissors?");
 		setValue(Validator.getAttackChoice(scan, scan.nextLine().toLowerCase()));

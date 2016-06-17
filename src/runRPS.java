@@ -24,6 +24,9 @@ public class runRPS {
 
 			if (player.equals("Red")) {
 
+				// set player's stats with return of compareRPS(passing it
+				// player1 value and return of
+				// player2.play(player2.getvalue()))///
 				player1.setStats(RPS.compareRPS(player1.getValue(),
 						red.play(player1.getValue())));
 			} else if (player.equals("Blue")) {
@@ -39,6 +42,7 @@ public class runRPS {
 
 		} while (Character.toLowerCase(option.charAt(0)) == 'y');
 
+		// running rps.toString passing it name and getStats
 		System.out.println(RPS.toString(player1.getName(), player1.getStats()));
 		scan1.close();
 	}

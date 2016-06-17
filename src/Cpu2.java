@@ -4,6 +4,7 @@ public class Cpu2 extends Cpu1 {
 		super(name);
 	}
 
+	// simple generateR chosing rock every times
 	public void generateRoshambo() {
 
 		super.setValue(RPS.ROCK);

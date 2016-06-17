@@ -1,5 +1,6 @@
 public class Cpu1 extends Player {
 
+	// Cpu constructor
 	public Cpu1(String name) {
 		super(name);
 	}
@@ -30,6 +31,8 @@ public class Cpu1 extends Player {
 
 	}
 
+	// play runs generateRoshambo - takes choice and outputs cpu and your
+	// options - uses {w, l, t} array to decide winner, returns cpu's choice
 	public RPS play(RPS choice) {
 		generateRoshambo();
 		System.out.println(getName() + " chose " + getValue());

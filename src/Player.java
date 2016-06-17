@@ -11,21 +11,19 @@ public abstract class Player {
 		this.name = name;
 	}
 
+	// setStats takes a 3 digit integer array with {w, l, t} format - stores
+	// each index in corresponding variable
 	public void setStats(int[] score) {
 		wins += score[0];
 		losses += score[1];
 		ties += score[2];
 	}
 
-	public String getStats() {
-		return "you have " + wins + " win(s), " + losses + " loss(es), " + ties
-				+ " tie(s).";
-	}
+	// get stats returns win, loss, tie variables
+	public int[] getStats() {
+		int[] stats = { wins, losses, ties };
 
-	public void setName(String name) {
-
-		this.name = name;
-
+		return stats;
 	}
 
 	// getName
@@ -47,6 +45,7 @@ public abstract class Player {
 
 	}
 
+	//abstract 
 	public abstract void generateRoshambo();
 
 }
