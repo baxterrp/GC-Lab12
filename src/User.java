@@ -9,22 +9,26 @@ public class User extends Player {
 	}
 
 	// setValue for User takes string input
-	public void setValue(String value) {
+	public RPS play(RPS choice) {
+		super.setValue(choice);
 
-		if (value.equals("rock")) {
-			super.setValue(RPS.ROCK);
-		} else if (value.equals("paper")) {
-			super.setValue(RPS.PAPER);
-		} else if (value.equals("scissors")) {
-			super.setValue(RPS.SCISSORS);
-		}
-
+		return choice;
 	}
 
 	// gets input from user, runs setValue with choice
 	public void generateRoshambo() {
+		String choice;
 		System.out.print("Rock, paper, or scissors?");
-		setValue(Validator.getAttackChoice(scan, scan.nextLine().toLowerCase()));
+
+		choice = Validator.getAttackChoice(scan, scan.nextLine().toLowerCase());
+
+		if (choice.equals("rock")) {
+			play(RPS.ROCK);
+		} else if (choice.equals("paper")) {
+			play(RPS.PAPER);
+		} else if (choice.equals("scissors")) {
+			play(RPS.SCISSORS);
+		}
 
 	}
 }

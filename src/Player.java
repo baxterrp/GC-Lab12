@@ -45,7 +45,9 @@ public abstract class Player {
 
 	}
 
-	//abstract 
+	public abstract RPS play(RPS choice);
+
+	// abstract
 	public abstract void generateRoshambo();
 
 }
